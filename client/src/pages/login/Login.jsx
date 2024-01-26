@@ -26,7 +26,7 @@ function Login() {
         e.preventDefault();
         try {
           // console.log(userData);
-          const response = await axios.post('http://localhost:5000/login', userData, {
+          const response = await axios.post('/api/login', userData, {
             headers: {
               'Content-Type': 'application/json'
             }

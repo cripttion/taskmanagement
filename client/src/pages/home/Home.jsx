@@ -23,7 +23,7 @@ export const Home = () => {
   const userID = sessionStorage.getItem("userId");
   const getData = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/all/${userID}`, {
+      const response = await axios.get(`/api/all/${userID}`, {
         withCredentials: true, // Include credentials (cookies) in the request
         headers: {
           "Content-Type": "application/json",
@@ -43,7 +43,7 @@ export const Home = () => {
   };
   const handleUpdateClick = async(index) => {
     try{
-        const response = await axios.put(`http://localhost:5000/updateTask/${userID}/${index}`,taskUpdateData,{
+        const response = await axios.put(`/api/updateTask/${userID}/${index}`,taskUpdateData,{
             withCredentials: true, // Include credentials (cookies) in the request
         headers: {
           "Content-Type": "application/json",

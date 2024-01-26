@@ -15,6 +15,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 const allowedOrigins = [
   'http://localhost:5173',
+  'https://taskmanagement-cripttions-projects.vercel.app'
   // Add other origins as needed
 ];
 app.use(cors(

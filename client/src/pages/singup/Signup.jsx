@@ -20,7 +20,7 @@ function Signup() {
     const handleFormSubmit = async (e) => {
         e.preventDefault();
         try {
-          const response = await axios.post('http://localhost:5000/addUser', userData, {
+          const response = await axios.post('/api/addUser', userData, {
             headers: {
               'Content-Type': 'application/json'
             }
