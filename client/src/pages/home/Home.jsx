@@ -23,7 +23,7 @@ export const Home = () => {
   const userID = sessionStorage.getItem("userId");
   const getData = async () => {
     try {
-      const response = await axios.get(`/api/all/${userID}`, {
+      const response = await axios.get(`https://task-management-okh1.onrender.com/all/${userID}`, {
         withCredentials: true, // Include credentials (cookies) in the request
         headers: {
           "Content-Type": "application/json",
@@ -43,8 +43,8 @@ export const Home = () => {
   };
   const handleUpdateClick = async(index) => {
     try{
-        const response = await axios.put(`/api/updateTask/${userID}/${index}`,taskUpdateData,{
-            withCredentials: true, // Include credentials (cookies) in the request
+        const response = await axios.put(`https://task-management-okh1.onrender.com/updateTask/${userID}/${index}`,taskUpdateData,{
+        withCredentials: true, // Include credentials (cookies) in the request
         headers: {
           "Content-Type": "application/json",
         },

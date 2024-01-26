@@ -31,7 +31,7 @@ const Header = () => {
             <User />
             
             {isLogined&&<span onClick={handleLogoutClick}>Logout</span>}
-            {!isLogined&&<span>Login</span>}
+            {!isLogined&&<span onClick={handleLogoutClick}>Login</span>}
            
           </div>
         </div>

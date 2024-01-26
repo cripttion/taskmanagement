@@ -12,7 +12,7 @@ function TaskAction({onUpdate,onDelete,index,updateClicked}) {
   }
   const handleDeleteClick = async()=>{
      try{
-        const response = await axios.get(`/api/deletetask?userId=${userId}&index=${index}`,{
+        const response = await axios.get(`https://task-management-okh1.onrender.com/deletetask?userId=${userId}&index=${index}`,{
             withCredentials: true, // Include credentials (cookies) in the request
         headers: {
           "Content-Type": "application/json",
