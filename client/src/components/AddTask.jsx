@@ -19,7 +19,7 @@ function AddTask(props) {
     const userId = sessionStorage.getItem("userId");
     try {
       const response = await axios.post(
-        `/api/addTask/${userId}`,
+        `/addTask/${userId}`,
         taskData,
         {
           withCredentials: true, // Include credentials (cookies) in the request

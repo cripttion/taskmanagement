@@ -15,6 +15,8 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+
+
 const allowedOrigins = [
   'http://localhost:5173',
   'https://taskmanagement-cripttions-projects.vercel.app',
@@ -45,6 +47,7 @@ app.use(
 connectDB();
 
 const secretKey = process.env.SECRET_KEY;
+app.use(express.static('dist'));
 
 app.post('/login', async (req, res) => {
   const userID = req.body.userID;
